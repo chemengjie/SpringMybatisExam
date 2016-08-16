@@ -12,12 +12,30 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="src/main/resources/lib/aspectjrt.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/lib/aspectjweaver.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/lib/mybatis-3.4.1.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/lib/mybatis-spring-1.3.0.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/lib/mysql-connector-5.1.39.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/lib/spring-aop-4.3.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/lib/spring-beans-4.3.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/lib/spring-context-4.3.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/lib/spring-core-4.3.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/lib/spring-expression-4.3.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/lib/spring-jdbc-4.3.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/lib/spring-tx-4.3.2.RELEASE.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
