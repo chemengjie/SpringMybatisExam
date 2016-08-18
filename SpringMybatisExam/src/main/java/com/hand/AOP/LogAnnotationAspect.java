@@ -3,14 +3,12 @@ package com.hand.AOP;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 
 /**
  * 日志切面类
  */
-@Aspect // 定义切面类
 public class LogAnnotationAspect {
 	// 定义切入点
 	@Pointcut("execution(* com.hand.AOP.CanAddToDb.AddIdEntity(..))")

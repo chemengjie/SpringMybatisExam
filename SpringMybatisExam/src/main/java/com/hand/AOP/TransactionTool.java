@@ -6,30 +6,26 @@ import org.springframework.transaction.support.TransactionCallback;
 import org.springframework.transaction.support.TransactionTemplate;
 
 import com.hand.Util.SpringBeanFactory;
-import com.sakila.Entity.Address;
-import com.sakila.Entity.Customer;
-import com.sakila.MybatisImpl.AddressDaoSp;
+import com.hand.tables.MybatisImpl.AddressDaoSp;
+import com.hand.tables.entity.Address;
+import com.hand.tables.entity.Customer;
 
 public class TransactionTool {
 	PlatformTransactionManager ptm;
 	TransactionTemplate tt;
-	
 	public PlatformTransactionManager getPtm() {
 		return ptm;
 	}
-
 	public void setPtm(PlatformTransactionManager ptm) {
 		this.ptm = ptm;
 	}
-
 	public TransactionTemplate getTt() {
 		return tt;
 	}
-
 	public void setTt(TransactionTemplate tt) {
 		this.tt = tt;
 	}
-
+	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public void doCustomerAddIdEntityTransaction(final Customer aim){
 		tt.execute(new TransactionCallback() {
@@ -44,7 +40,6 @@ public class TransactionTool {
 			}
 		});
 	}
-	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public void doCustomerDelByIDTransaction(final int delID){
 		tt.execute(new TransactionCallback() {
@@ -59,7 +54,6 @@ public class TransactionTool {
 			}
 		});
 	}
-	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public Customer doCustomerGetLastCustomerTransaction(){
 		return tt.execute(new TransactionCallback() {
@@ -75,7 +69,6 @@ public class TransactionTool {
 			}
 		});
 	}
-	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public int doAddressGetCountByIdTransaction(final int addNum){
 		return tt.execute(new TransactionCallback() {
@@ -91,7 +84,6 @@ public class TransactionTool {
 			}
 		});
 	}
-	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public Address doAddressGetByIDTransaction(final int addNum){
 		return tt.execute(new TransactionCallback() {

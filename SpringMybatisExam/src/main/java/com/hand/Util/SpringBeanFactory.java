@@ -5,9 +5,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SpringBeanFactory {
 	private static final BeanFactory context;
-	private SpringBeanFactory(){}
+	private SpringBeanFactory(){};
 	static{
-		context=new ClassPathXmlApplicationContext("ApplicationContext.xml");
+		context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
 	}
 	public static BeanFactory getBeanFactory(){
 		return context;
